@@ -1,8 +1,8 @@
-NAME    = ex01
+NAME    = ex02
 CC      = c++
 CFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRCS    =  main.cpp ClapTrap.cpp
+SRCS    =  main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS    = $(SRCS:.cpp=.o)
 
 all: $(NAME)

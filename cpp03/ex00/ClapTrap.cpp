@@ -12,7 +12,7 @@ ClapTrap::~ClapTrap()
 	return;
 }
 
-ClapTrap::ClapTrap(ClapTrap &other)
+ClapTrap::ClapTrap(const ClapTrap &other)
 {
 	std::cout << this->_name << " constructor copy called!" << std::endl;
 	*this = other;
