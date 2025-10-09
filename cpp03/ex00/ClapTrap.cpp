@@ -35,12 +35,12 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (this->_Energy_point <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " can't attacks " << target << "(reason : too low Energie point" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't attacks " << target << "(reason : too low Energie point)" << std::endl;
 		return;
 	}
 	if (this->_Hit_point <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " can't attacks " << target << "reason : too low Hit point" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't attacks " << target << "(reason : too low Hit point)" << std::endl;
 		return;
 	}
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << std::endl;
