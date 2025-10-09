@@ -27,6 +27,7 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
+	std::cout << this->_name << " ClapTrap constructor d'affectation called!" << std::endl;
     if (this != &other)
 	{
         this->_name = other._name;

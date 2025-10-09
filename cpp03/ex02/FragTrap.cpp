@@ -35,7 +35,7 @@ FragTrap::FragTrap(const FragTrap &other): ClapTrap(other)
 
 FragTrap &FragTrap::operator=(const FragTrap &other)
 {
-	std::cout << this->_name << " FragTrap constructor d'affectation. called!" << std::endl;
+	std::cout << this->_name << " FragTrap constructor d'affectation called!" << std::endl;
     if (this != &other)
 	{
         this->_name = other._name;

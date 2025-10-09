@@ -35,7 +35,7 @@ ScavTrap::ScavTrap(const ScavTrap &other): ClapTrap(other)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-	std::cout << this->_name << " ScavTrap constructor d'affectation. called!" << std::endl;
+	std::cout << this->_name << " ScavTrap constructor d'affectation called!" << std::endl;
     if (this != &other)
 	{
         this->_name = other._name;
