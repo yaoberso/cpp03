@@ -33,9 +33,14 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 
 void ClapTrap::attack(const std::string& target)
 {
-	if (this->_Hit_point <= 0 || this->_Energy_point <= 0)
+	if (this->_Energy_point <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " can't attacks " << target << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't attacks " << target << "(reason : too low Energie point" << std::endl;
+		return;
+	}
+	if (this->_Hit_point <= 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " can't attacks " << target << "reason : too low Hit point" << std::endl;
 		return;
 	}
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << std::endl;
@@ -52,9 +57,19 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->_Hit_point <= 0 || this->_Energy_point <= 0 || (unsigned int)this->_Energy_point < amount)
+	if ((unsigned int)this->_Energy_point < amount)
 	{
-		std::cout << "ClapTrap " << this->_name << " can't repaired" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't repaired" << " (reason : too hight amount)" << std::endl;
+		return;
+	}
+	if (this->_Energy_point <= 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " can't repaired " << " (reason : too low Energie point)" << std::endl;
+		return;
+	}
+	if (this->_Hit_point <= 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " can't repaired "  << "(reason : too low Hit point)" << std::endl;
 		return;
 	}
 	std::cout << "ClapTrap " << this->_name << " repaired itself!"<< std::endl;
