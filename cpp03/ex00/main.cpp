@@ -2,7 +2,7 @@
 
 int main() {
     std::cout << "=== Test 1: ClapTrap ===" << std::endl;
-    ClapTrap clap("Clappy");
+    ClapTrap clap;
     clap.attack("enemy1");
     clap.takeDamage(3);
     clap.beRepaired(2);
